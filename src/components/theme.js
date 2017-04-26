@@ -16,8 +16,8 @@ const colors = {
   midgray: '#444',
   gray: '#eee',
   black: '#666',
-  orange: 'rgb(219, 154, 78)'
-
+  orange: 'rgb(219, 154, 78)',
+  white: '#fff'
 }
 
 export default {
@@ -103,7 +103,12 @@ export default {
   },
   Breadcrumbs: {
     ...sans,
-    color: colors.green
+    color: colors.green,
+    textDecoration: 'none'
+  },
+  Block: {
+    backgroundColor: colors.gray,
+    borderRadius: '10px',
+    padding: '10px'
   }
-
 }

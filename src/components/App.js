@@ -10,7 +10,6 @@ import theme from './theme'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import { Toolbar,
   NavItem,
-  InlineForm,
   Space,
   Footer,
   Text,

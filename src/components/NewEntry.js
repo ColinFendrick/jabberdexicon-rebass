@@ -2,7 +2,7 @@ import React from 'react'
 import { Panel, PanelHeader, PanelFooter, Textarea, Close, Input, Space, Button } from 'rebass'
 
 const NewEntry = ({ onDismiss }) => (
-  <div className='NewEntry' style={{ maxWidth: '600px' }}>
+  <div className='NewEntry'>
     <Panel theme='info'>
       <PanelHeader
         inverted

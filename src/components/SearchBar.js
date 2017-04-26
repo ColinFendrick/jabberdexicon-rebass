@@ -1,21 +1,31 @@
 import React, { Component } from 'react'
 import { InlineForm } from 'rebass'
+import { withRouter } from 'react-router-dom'
 
 class SearchBar extends Component {
-  _change = input => {
-    console.log(input)
+  state = {
+    search: ''
+  }
+
+  _change = e => {
+    this.setState({
+      search: e.target.value
+    }, () => {
+      const path = this.state.search.length > 0 ? `/search/${this.state.search}` : '/'
+      this.props.history.replace(path)
+    })
   }
 
   render () {
     return <InlineForm
       style={{backgroundColor: '#fff', color: '#666'}}
-      buttonLabel='Go'
       label='InlineForm'
       name='inline_form'
-      onChange={this._change(this.value)}
-      onSubmit={e => { e.preventDefault() }}
+      onChange={this._change}
+      value={this.state.search}
+      onSubmit={this._change}
     />
   }
 }
 
-export default SearchBar
+export default withRouter(SearchBar)
